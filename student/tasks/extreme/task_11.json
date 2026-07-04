@@ -1,0 +1,13 @@
+{
+  "task_id": "task_11",
+  "blocks": ["A", "B", "C", "D", "E"],
+  "nl_only": true,
+  "natural_language": "Five blocks — call them A through E — are arranged in two distinct piles. The left pile has C resting on B, and B resting on A, with A on the table. So left pile from bottom to top goes: A, B, C. The right pile is a short one: D is on E, and E is on the table. The topmost surfaces belong to C on the left and D on the right. The gripper is currently empty. We need to merge everything into one single column. The desired ordering from the table upward: C should be at the very bottom, then D on top of C, then E above D, then B above E, with A at the summit. So the final column reads bottom-to-top as C, D, E, B, A.",
+  "initial_state": [
+    "on(C,B)", "on(B,A)", "ontable(A)", "clear(C)",
+    "on(D,E)", "ontable(E)", "clear(D)", "handempty"
+  ],
+  "goal_state": [
+    "on(A,B)", "on(B,E)", "on(E,D)", "on(D,C)", "ontable(C)"
+  ]
+}

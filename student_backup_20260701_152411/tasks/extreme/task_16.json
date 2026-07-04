@@ -1,0 +1,16 @@
+{
+  "task_id": "task_16",
+  "blocks": ["A", "B", "C", "D", "E", "F", "G"],
+  "nl_only": true,
+  "natural_language": "Seven blocks, three small stacks plus one loner. First stack: B sits on A, A on the table. Second stack: D rests on C, C on the table. Third stack: F is on E, E on the table. The loner is G, sitting alone on the table. The grab-ready blocks are B, D, F (the tops of each stack) plus G. The robotic gripper is empty right now. We want to reorganize from three stacks into two new stacks. The first new stack, from bottom to top: A at the base, then B on A, then C on B. So we're adding C to the existing A-B stack. The second new stack: D at the base, then E on D, then F on E, then G crowning at the peak. So we're moving D to be the new base and adding G to the original E-F stack. Blocks must end up exactly as described.",
+  "initial_state": [
+    "on(B,A)", "ontable(A)", "clear(B)",
+    "on(D,C)", "ontable(C)", "clear(D)",
+    "on(F,E)", "ontable(E)", "clear(F)",
+    "ontable(G)", "clear(G)", "handempty"
+  ],
+  "goal_state": [
+    "on(C,B)", "on(B,A)", "ontable(A)",
+    "on(G,F)", "on(F,E)", "on(E,D)", "ontable(D)"
+  ]
+}

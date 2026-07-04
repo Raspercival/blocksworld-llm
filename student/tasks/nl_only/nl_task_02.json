@@ -1,0 +1,22 @@
+{
+  "task_id": "nl_task_02",
+  "blocks": ["A", "B", "C", "D"],
+  "nl_only": true,
+  "natural_language": "There's a messy pile of four blocks here — A, B, C, D. Let me describe the situation. C is currently resting upon A. A is flat on the table. B and D? They're each sitting alone on the table, nothing above them, nothing below them except the table. The gripper's free. Here's the target layout: A should end up on B, then B on C. Oh, and don't disturb D — it stays where it is, on the table, untouched. Everything else can be rearranged as needed.",
+  "initial_state": [
+    "on(C,A)",
+    "ontable(A)",
+    "ontable(B)",
+    "ontable(D)",
+    "clear(C)",
+    "clear(B)",
+    "clear(D)",
+    "handempty"
+  ],
+  "goal_state": [
+    "on(A,B)",
+    "on(B,C)",
+    "ontable(C)",
+    "ontable(D)"
+  ]
+}

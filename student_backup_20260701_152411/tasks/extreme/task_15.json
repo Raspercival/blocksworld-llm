@@ -1,0 +1,14 @@
+{
+  "task_id": "task_15",
+  "blocks": ["A", "B", "C", "D", "E", "F", "G", "H"],
+  "nl_only": true,
+  "natural_language": "Eight blocks — A through H — have been stacked into one massive pillar. Reading from the floor to the ceiling: A is on the table, B on A, C on B, D on C, E on D, F on E, G on F, and finally H at the very top. So it's an eight-story tower. Only H at the peak is exposed and grabbable. The robot arm starts empty-handed. Your task is to completely reverse this entire tower from top to bottom. The new arrangement should read: H on the table, then G on H, then F on G, then E on F, then D on E, then C on D, then B on C, and finally A at the summit. In other words, flip it — what was the roof becomes the foundation, what was the foundation becomes the roof, and everything in between slides accordingly.",
+  "initial_state": [
+    "on(H,G)", "on(G,F)", "on(F,E)", "on(E,D)", "on(D,C)",
+    "on(C,B)", "on(B,A)", "ontable(A)", "clear(H)", "handempty"
+  ],
+  "goal_state": [
+    "on(A,B)", "on(B,C)", "on(C,D)", "on(D,E)",
+    "on(E,F)", "on(F,G)", "on(G,H)", "ontable(H)"
+  ]
+}

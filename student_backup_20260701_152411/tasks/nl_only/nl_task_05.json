@@ -1,0 +1,28 @@
+{
+  "task_id": "nl_task_05",
+  "blocks": ["A", "B", "C", "D", "E", "F", "G"],
+  "nl_only": true,
+  "natural_language": "Seven blocks, A through G, in three separate piles on the table. Pile number one: C is on B, which is on A, which touches the table. Pile number two: E sits on D, D on the table. Pile number three: G rests on F, F on the table. The exposed surfaces — C, E, G — are all clear and grabbable. The hand starts empty. Now for the rearrangement. We want to end up with only two piles, not three. The new left pile: G on top of E, which is on top of C, which is on A, which stays on the table. The new right pile: F on D, which is on B, B on the table. So essentially we're merging the three piles into two by redistributing the blocks.",
+  "initial_state": [
+    "on(C,B)",
+    "on(B,A)",
+    "ontable(A)",
+    "clear(C)",
+    "on(E,D)",
+    "ontable(D)",
+    "clear(E)",
+    "on(G,F)",
+    "ontable(F)",
+    "clear(G)",
+    "handempty"
+  ],
+  "goal_state": [
+    "on(G,E)",
+    "on(E,C)",
+    "on(C,A)",
+    "ontable(A)",
+    "on(F,D)",
+    "on(D,B)",
+    "ontable(B)"
+  ]
+}

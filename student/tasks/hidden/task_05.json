@@ -1,0 +1,14 @@
+{
+  "task_id": "task_05",
+  "blocks": ["A", "B", "C", "D", "E"],
+  "nl_only": true,
+  "natural_language": "Five blocks are scattered across the workbench. They're all on the table right now — A, B, C, D, and E, each sitting by itself with nothing covering it. The robotic gripper is currently free. Your task: stack them into a single column, five blocks high. From floor to ceiling, the order should be E at the base, then D resting on E, then C on D, then B on C, and finally A crowning the very top. Nobody else touches the table except E.",
+  "initial_state": [
+    "ontable(A)", "ontable(B)", "ontable(C)", "ontable(D)", "ontable(E)",
+    "clear(A)", "clear(B)", "clear(C)", "clear(D)", "clear(E)",
+    "handempty"
+  ],
+  "goal_state": [
+    "on(A,B)", "on(B,C)", "on(C,D)", "on(D,E)", "ontable(E)"
+  ]
+}

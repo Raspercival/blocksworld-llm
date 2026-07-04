@@ -1,0 +1,23 @@
+{
+  "task_id": "nl_task_03",
+  "blocks": ["A", "B", "C", "D", "E"],
+  "nl_only": true,
+  "natural_language": "Five blocks, A through E, are arranged as follows. If you look from the table up: B is at the very bottom. Then C on top of that. Then D. Then E at the very peak. So it's a four-block column. Oh, and A is off to the side, sitting alone on the table. You can tell which ones are accessible — E (right at the top) and A (all by itself). The arm is empty and ready. The goal is to flip this column upside down. I want A at the top, then B underneath it, then C, then D, and E at the base, touching the table. So the column reverses order, and A moves from the side to become the new crown.",
+  "initial_state": [
+    "on(E,D)",
+    "on(D,C)",
+    "on(C,B)",
+    "ontable(B)",
+    "ontable(A)",
+    "clear(E)",
+    "clear(A)",
+    "handempty"
+  ],
+  "goal_state": [
+    "on(A,B)",
+    "on(B,C)",
+    "on(C,D)",
+    "on(D,E)",
+    "ontable(E)"
+  ]
+}

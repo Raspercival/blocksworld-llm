@@ -1,0 +1,15 @@
+{
+  "task_id": "task_19",
+  "blocks": ["A", "B", "C", "D", "E", "F", "G", "H"],
+  "nl_only": true,
+  "natural_language": "Eight blocks form two majestic four-block towers, side by side. The left tower from bottom to top: A is on the table, B on A, C on B, and D at the peak. The right tower: E on the table, F on E, G on F, and H crowning the top. Only D (left peak) and H (right peak) are exposed. The robot hand is empty. You need to reverse both towers simultaneously, but keep them as separate towers — no blocks should cross between the left and right groups. The left tower after reversal: D should be on the table, then C on D, then B on C, and A at the peak. The right tower after reversal: H on the table, then G on H, then F on G, and E at the peak. So each tower individually flips upside-down, and the two groups remain independent throughout.",
+  "initial_state": [
+    "on(D,C)", "on(C,B)", "on(B,A)", "ontable(A)", "clear(D)",
+    "on(H,G)", "on(G,F)", "on(F,E)", "ontable(E)", "clear(H)",
+    "handempty"
+  ],
+  "goal_state": [
+    "on(A,B)", "on(B,C)", "on(C,D)", "ontable(D)",
+    "on(E,F)", "on(F,G)", "on(G,H)", "ontable(H)"
+  ]
+}

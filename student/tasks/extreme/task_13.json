@@ -1,0 +1,16 @@
+{
+  "task_id": "task_13",
+  "blocks": ["A", "B", "C", "D", "E", "F", "G"],
+  "nl_only": true,
+  "natural_language": "Seven blocks occupy the workspace. There's a pre-existing two-block tower: B sits on A, and A is on the table. The other five blocks — C, D, E, F, and G — are each placed individually on the table, not stacked on anything. All tops are exposed: B (top of the tower) plus each of the five loose blocks. The manipulator starts empty. Here's the catch: the existing B-on-A tower must not be disturbed at all. Leave it exactly where it is. Your only job is to build a second tower out of the five loose blocks. Stack them in this order from the ground up: C at the bottom, then D on C, then E on D, then F on E, and G at the very peak. So you end up with two towers: the original B-on-A, and the new G-F-E-D-C column. Do NOT touch A or B.",
+  "initial_state": [
+    "on(B,A)", "ontable(A)", "clear(B)",
+    "ontable(C)", "clear(C)", "ontable(D)", "clear(D)",
+    "ontable(E)", "clear(E)", "ontable(F)", "clear(F)",
+    "ontable(G)", "clear(G)", "handempty"
+  ],
+  "goal_state": [
+    "on(B,A)", "ontable(A)",
+    "on(G,F)", "on(F,E)", "on(E,D)", "on(D,C)", "ontable(C)"
+  ]
+}

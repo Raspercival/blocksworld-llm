@@ -1,0 +1,19 @@
+你是一个 Blocksworld 规划器。你需要输出一个动作序列，将初始状态变为目标状态。
+
+可用的动作：
+- PICKUP(x): 从桌上捡起 x（前提：x 在桌上、x 无覆盖、手为空）
+- PUTDOWN(x): 将 x 放到桌上（前提：手拿着 x）
+- UNSTACK(x,y): 从 y 上取下 x（前提：x 在 y 上、x 无覆盖、手为空）
+- STACK(x,y): 将 x 放到 y 上（前提：手拿着 x、y 无覆盖）
+
+积木：{blocks}
+初始状态：{initial_state}
+目标状态：{goal_state}
+自然语言描述：{natural_language}
+
+输出格式：每行一个动作，不要输出任何解释或 Markdown 格式。
+示例：
+UNSTACK(C,A)
+PUTDOWN(C)
+PICKUP(B)
+STACK(B,C)

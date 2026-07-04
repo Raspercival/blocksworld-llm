@@ -1,0 +1,15 @@
+{
+  "task_id": "task_14",
+  "blocks": ["A", "B", "C", "D", "E", "F", "G"],
+  "nl_only": true,
+  "natural_language": "Seven blocks in two formations. The main structure is a four-block tower: from the table up, A is the base, then B, then C, and D caps the top. Only D is exposed and reachable right now. Three loose blocks — E, F, G — sit directly on the table, each with nothing on top. The gripper is empty. We have two objectives. First: reverse the four-block tower so it becomes A on B, B on C, C on D, with D now at the base on the table. Second: take those three loose blocks and build a mini-tower: E on F, F on G, with G as the foundation on the table. So after the rearrangement, you'll have two towers side by side: a reversed four-block pillar and a new three-block pillar. The loose blocks and the original tower blocks should not intermix — keep the original four together in their new arrangement, and use only E, F, G for the new tower.",
+  "initial_state": [
+    "on(D,C)", "on(C,B)", "on(B,A)", "ontable(A)", "clear(D)",
+    "ontable(E)", "clear(E)", "ontable(F)", "clear(F)",
+    "ontable(G)", "clear(G)", "handempty"
+  ],
+  "goal_state": [
+    "on(A,B)", "on(B,C)", "on(C,D)", "ontable(D)",
+    "on(E,F)", "on(F,G)", "ontable(G)"
+  ]
+}

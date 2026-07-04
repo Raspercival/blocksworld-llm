@@ -1,0 +1,33 @@
+你是一个 PDDL 专家。请根据下面的任务描述和固定的 domain 文件，生成一个合法的 PDDL problem 文件。
+
+固定的 domain 文件：
+{domain_pddl}
+
+任务信息：
+积木：{blocks}
+初始状态：{initial_state}
+目标状态：{goal_state}
+自然语言描述：{natural_language}
+
+要求：
+1. 使用 (:domain blocksworld)
+2. 在 :objects 中声明所有积木，类型为 block
+3. :init 中的谓词语法为 (predicate arg1 arg2)，用空格分隔参数
+4. :goal 用 (and ...) 包裹所有目标谓词
+5. 只输出 PDDL problem 文件，不要有任何其他文字
+
+正确的 PDDL problem 示例结构：
+(define (problem example)
+  (:domain blocksworld)
+  (:objects A B - block)
+  (:init
+    (ontable A)
+    (ontable B)
+    (clear A)
+    (clear B)
+    (handempty)
+  )
+  (:goal (and
+    (on A B)
+  ))
+)

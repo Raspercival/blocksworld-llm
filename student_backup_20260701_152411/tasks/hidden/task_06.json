@@ -1,0 +1,13 @@
+{
+  "task_id": "task_06",
+  "blocks": ["A", "B", "C", "D"],
+  "nl_only": true,
+  "natural_language": "Here's a messy arrangement of four blocks. Looking at the left side: D is balanced on top of B, and B itself rests on A, which is flat on the table. To the right, C sits alone on the table, uncovered. The topmost block on the left (that's D) has nothing above it. The manipulator arm is empty and ready to work. We need to reorganize into a new configuration. The target layout should read from bottom to top: B at the base, then A on B, then D on A, and finally C at the peak. So C sits on D, D on A, A on B, and B touches the table.",
+  "initial_state": [
+    "on(D,B)", "on(B,A)", "ontable(A)", "ontable(C)",
+    "clear(D)", "clear(C)", "handempty"
+  ],
+  "goal_state": [
+    "on(C,D)", "on(D,A)", "on(A,B)", "ontable(B)"
+  ]
+}

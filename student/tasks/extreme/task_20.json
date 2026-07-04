@@ -1,0 +1,16 @@
+{
+  "task_id": "task_20",
+  "blocks": ["A", "B", "C", "D", "E", "F", "G", "H", "I"],
+  "nl_only": true,
+  "natural_language": "The ultimate challenge — nine blocks, three separate three-block towers. Tower Alpha from bottom: A on table, B on A, C on top. Tower Beta: D on table, E on D, F on top. Tower Gamma: G on table, H on G, I crowning the peak. Only C, F, and I are exposed (one per tower). Hand empty. Your mission: completely dissolve all three towers and recombine them into two brand-new towers. New Tower One from the table up: A at the base, then C on A, then F on C, then I at the summit. So it uses blocks from all three original towers. New Tower Two: B at the base, then D on B, then E on D, then G on E, then H at the peak. Notice how original relationships are severed — C no longer sits on B, F no longer sits on E, I no longer sits on H. Everything shifts. Nine blocks, two towers, complete reshuffle.",
+  "initial_state": [
+    "on(C,B)", "on(B,A)", "ontable(A)", "clear(C)",
+    "on(F,E)", "on(E,D)", "ontable(D)", "clear(F)",
+    "on(I,H)", "on(H,G)", "ontable(G)", "clear(I)",
+    "handempty"
+  ],
+  "goal_state": [
+    "on(I,F)", "on(F,C)", "on(C,A)", "ontable(A)",
+    "on(H,G)", "on(G,E)", "on(E,D)", "on(D,B)", "ontable(B)"
+  ]
+}

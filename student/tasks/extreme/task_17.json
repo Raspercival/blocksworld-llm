@@ -1,0 +1,15 @@
+{
+  "task_id": "task_17",
+  "blocks": ["A", "B", "C", "D", "E", "F", "G"],
+  "nl_only": true,
+  "natural_language": "The table holds seven blocks in a somewhat scrambled configuration. First column: G sits atop F, and F sits atop A, with A on the table. Second column: E is stacked on D, and D is stacked on B, with B on the table. Off to the side by itself is block C, sitting directly on the table. The blocks with nothing above them are G (first column's peak), E (second column's peak), and C (the loner). The arm is free. Now for the target layout — this is a complete reshuffle. The new first column should be: D on G, G on C, C on A, with A on the table. The new second column: F on E, E on B, with B on the table. Notice how blocks from both original columns get intermixed. C goes from being a loner to being in the middle of a stack. Everything gets redistributed.",
+  "initial_state": [
+    "on(G,F)", "on(F,A)", "ontable(A)", "clear(G)",
+    "on(E,D)", "on(D,B)", "ontable(B)", "clear(E)",
+    "ontable(C)", "clear(C)", "handempty"
+  ],
+  "goal_state": [
+    "on(D,G)", "on(G,C)", "on(C,A)", "ontable(A)",
+    "on(F,E)", "on(E,B)", "ontable(B)"
+  ]
+}

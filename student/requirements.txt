@@ -1,0 +1,11 @@
+# Blocksworld 学生作业依赖
+# 安装：python3 -m pip install -r requirements.txt
+
+# Q2 必需：PDDL 规划器（纯 Python）
+pyperplan>=2.1
+
+# LLM API 客户端（默认 provider=openai / openai-compatible 时必需）
+openai>=1.0
+
+# 仅当使用 --provider anthropic 时需要，可选
+# anthropic>=0.39

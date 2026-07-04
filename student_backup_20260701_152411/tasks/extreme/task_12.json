@@ -1,0 +1,15 @@
+{
+  "task_id": "task_12",
+  "blocks": ["A", "B", "C", "D", "E", "F"],
+  "nl_only": true,
+  "natural_language": "Six blocks, two independent three-block towers sitting side by side. Tower number one from bottom: A on table, B on A, C on top of B. Tower number two from bottom: D on table, E on D, F at the peak. The only reachable blocks initially are C (left tower's peak) and F (right tower's peak). The hand begins free. For the goal, each tower needs its top two blocks swapped while the bottom block stays put. So tower one should become: A still on the table, then C on A (note: C moves to the middle), and B on C at the peak. Tower two similarly: D on table, then F on D, and E sits on F at the peak. Two independent swaps, nothing crosses between towers.",
+  "initial_state": [
+    "on(C,B)", "on(B,A)", "ontable(A)", "clear(C)",
+    "on(F,E)", "on(E,D)", "ontable(D)", "clear(F)",
+    "handempty"
+  ],
+  "goal_state": [
+    "on(B,C)", "on(C,A)", "ontable(A)",
+    "on(E,F)", "on(F,D)", "ontable(D)"
+  ]
+}

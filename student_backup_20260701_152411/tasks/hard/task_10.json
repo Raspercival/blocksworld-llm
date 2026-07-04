@@ -1,0 +1,15 @@
+{
+  "task_id": "task_10",
+  "blocks": ["A", "B", "C", "D", "E", "F", "G"],
+  "nl_only": true,
+  "natural_language": "Seven blocks — A through G — in three small piles across the workspace. First pile: B is stacked on A, and A is on the table. Second pile: D sits on C, with C on the table. Third pile: F is atop E, with E on the table. Off on its own, G sits by itself on the table. All the top blocks — B, D, F, and G — have nothing covering them, so they're ready to grab. The robot hand begins empty. Your mission: combine everything into one single seven-block mega-tower. The stacking order from the floor upward must be A at the foundation, then B on A, then C on B, then D on C, then E on D, then F on E, and finally G perched right at the summit. One column, seven blocks, exact order.",
+  "initial_state": [
+    "on(B,A)", "ontable(A)", "clear(B)",
+    "on(D,C)", "ontable(C)", "clear(D)",
+    "on(F,E)", "ontable(E)", "clear(F)",
+    "ontable(G)", "clear(G)", "handempty"
+  ],
+  "goal_state": [
+    "on(G,F)", "on(F,E)", "on(E,D)", "on(D,C)", "on(C,B)", "on(B,A)", "ontable(A)"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "task_id": "task_07",
+  "blocks": ["A", "B", "C", "D", "E"],
+  "nl_only": true,
+  "natural_language": "Five blocks are on the table in this arrangement. To your left, there's a short stack: B sitting on top of C, and that C is directly on the table. Over on the right, another pair: D rests on E, with E touching the table. Right in the middle, block A is all alone on the table. The exposed surfaces belong to B (atop the left column), D (atop the right column), and lone A. The mechanical hand is idle. I want you to make one change: move A so it sits on B. Everything else must stay exactly as it is — D stays on E, C stays under B, nobody moves except A. Don't over-complicate it.",
+  "initial_state": [
+    "on(B,C)", "ontable(C)", "on(D,E)", "ontable(E)", "ontable(A)",
+    "clear(B)", "clear(D)", "clear(A)", "handempty"
+  ],
+  "goal_state": [
+    "on(A,B)", "on(B,C)", "ontable(C)", "on(D,E)", "ontable(E)"
+  ]
+}

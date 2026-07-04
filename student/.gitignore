@@ -1,0 +1,11 @@
+__pycache__/
+.cctx/
+.claude/
+outputs/
+results.json
+*.pyc
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.env
