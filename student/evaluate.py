@@ -77,7 +77,7 @@ def main():
 
     # LLM 配置
     provider = args.provider or os.environ.get("LLM_PROVIDER", "openai")
-    model = args.model or os.environ.get("LLM_MODEL", "gpt-4o")
+    model = args.model or os.environ.get("LLM_MODEL", "deepseek-chat")
     api_key = args.api_key or os.environ.get("LLM_API_KEY", os.environ.get("OPENAI_API_KEY", ""))
     base_url = args.base_url or os.environ.get("LLM_BASE_URL", None)
     if not api_key:
